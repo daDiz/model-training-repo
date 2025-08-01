@@ -88,9 +88,7 @@ def save_model_artifact(model_name, pipeline):
 
 
 def load_model_artifact(file_name):
-    blob = bucket.blob(
-        "my-first-project-466020-bucket/bank_campaign_artifact/" + file_name
-    )
+    blob = bucket.blob("bank_campaign_artifact/" + file_name)
     blob.download_to_filename(file_name)
     return load(file_name)
 
