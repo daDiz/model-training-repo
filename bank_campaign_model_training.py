@@ -115,6 +115,9 @@ def main():
     input_data_path = "gs://my-first-project-466020-bucket/bank_campaign_data/bank-campaign-training-data.csv"
     # input_data_path = "data/bank-campaign-training-data.csv"
     model_name = "xgboost"
+
+    print(f"{model_name}")
+
     df = load_data(input_data_path)
     categorical_cols = [
         "job",
